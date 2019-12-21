@@ -3,13 +3,13 @@ import Container from './container.js';
 import './App.css';
 
 class App extends Component {
-    renderContainer(title, text) {
-        return <Container />;
+    renderContainer(title, text, image) {
+        return <Container title={title} text={text} image={image}/>;
     }
 
     render() {
         return(
-            <div className="flex" style={{
+            <div style={{
                 flexDirection: "column",
                 display: "flex",
                 flex: 1,
@@ -17,17 +17,17 @@ class App extends Component {
                 backgroundColor: "blue"
             }}>
                 
-                <div className="flex" style={{
+                <div style={{
                     flexDirection: "row",
                     display: "flex",
                     flex: 1,
                     backgroundColor: "yellow"
                 }}>
-                    {this.renderContainer("First", "test text 1")}
-                    {this.renderContainer("Second", "test text 2")}
-                    {this.renderContainer("Third", "test text 3")}
+                    {this.renderContainer("First", "test text 1", "https://images-na.ssl-images-amazon.com/images/I/412qW%2BoKDBL._SX466_.jpg")}
+                    {this.renderContainer("Second", "test text 2", "https://images-na.ssl-images-amazon.com/images/I/412qW%2BoKDBL._SX466_.jpg")}
+                    {this.renderContainer("Third", "test text 3", "https://images-na.ssl-images-amazon.com/images/I/412qW%2BoKDBL._SX466_.jpg")}
                 </div>
-                <img src="https://cdn.shopify.com/s/files/1/0035/2780/2947/products/Asuna_Chibi_590x.png?v=1571711589" alt="new" style={{flex: 1}}/>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/412qW%2BoKDBL._SX466_.jpg" alt="new" style={{flex: 1}}/>
 
                 <h1>Hello World</h1>
                 <button>

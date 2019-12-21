@@ -5,7 +5,8 @@ class Container extends Component {
         super(props);
         this.state = {
             title : props.title,
-            text : props.text
+            text : props.text,
+            image : props.image
         }
     }
 
@@ -13,13 +14,15 @@ class Container extends Component {
         return (
             <div style={{display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                 <img 
-                src="https://cdn.shopify.com/s/files/1/0035/2780/2947/products/Asuna_Chibi_590x.png?v=1571711589"
+                src={this.state.image}
                 alt="new"
-                style={{resizeMode: "contain", flex: 1, width: 30, height: 30}}/>
-                asdf
-                <button>
+                style={{resizeMode: "contain", flex: 1, width: 100}}/>
+                <button
+                    onClick={() => this.setState({title: "Clicked"})}
+                >
                     {this.state.title}
                 </button>
+                <p>{this.state.text}</p>
             </div>
 
         )

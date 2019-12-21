@@ -9,23 +9,25 @@ class App extends Component {
 
     render() {
         return(
-            <div style={{
-                flex: 1,
+            <div className="flex" style={{
                 flexDirection: "column",
-                backgroundColor: "green",
+                display: "flex",
+                flex: 1,
+                justifyContent: "center",
+                backgroundColor: "blue"
             }}>
-                <div style={{
-                    display: "flex",
+                
+                <div className="flex" style={{
                     flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "red",
+                    display: "flex",
+                    flex: 1,
+                    backgroundColor: "yellow"
                 }}>
                     {this.renderContainer("First", "test text 1")}
                     {this.renderContainer("Second", "test text 2")}
                     {this.renderContainer("Third", "test text 3")}
                 </div>
-                <img src="https://cdn.shopify.com/s/files/1/0035/2780/2947/products/Asuna_Chibi_590x.png?v=1571711589" alt="new"/>
+                <img src="https://cdn.shopify.com/s/files/1/0035/2780/2947/products/Asuna_Chibi_590x.png?v=1571711589" alt="new" style={{flex: 1}}/>
 
                 <h1>Hello World</h1>
                 <button>

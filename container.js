@@ -11,13 +11,13 @@ class Container extends Component {
 
     render() {
         return (
-            <div className="centerized" style={{flexDirection: "column"}}>
+            <div style={{display: "flex", flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                 <img 
                 src="https://cdn.shopify.com/s/files/1/0035/2780/2947/products/Asuna_Chibi_590x.png?v=1571711589"
                 alt="new"
                 style={{resizeMode: "contain", flex: 1, width: 30, height: 30}}/>
                 asdf
-                <button className="centerized">
+                <button>
                     {this.state.title}
                 </button>
             </div>
